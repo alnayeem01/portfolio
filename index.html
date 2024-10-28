@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio website of Al Shahriar Nayeem, an aspiring Software Engineer and Full-Stack Web Developer.">
+    <meta name="keywords" content="Al Shahriar Nayeem, Software Engineer, Full-Stack Developer, Portfolio, HTML, CSS, JavaScript">
+    <meta name="author" content="Al Shahriar Nayeem">
+    <title>Al Shahriar Nayeem | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+<body>
+    <!-- Header / Navigation -->
+    <header>
+        <div id="logo">
+            <h1 class="logo">AL Shahrir Nayeem</h1>
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1>Hi, I'm <span class="highlight">Al Shahriar Nayeem</span></h1>
+            <p>Aspiring Full-Stack Developer Crafting Intuitive Web Solutions</p>
+            <a href="#projects" class="cta-button">View My Projects</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <img src="media/profile.jpeg" alt="Al Shahriar Nayeem" class="profile-pic">
+            <div class="about-text">
+                <p>I am a passionate software engineer and full-stack web developer with a strong foundation in computing. My journey into web development began during my undergraduate studies, where I honed my skills in HTML, CSS, JavaScript, Python, and Java. I thrive in dynamic environments where I can solve complex problems and create user-friendly applications.</p>
+                <h3>Fun Facts</h3>
+                <ul>
+                    <li>I love gaming and often create small projects based on my favorite games.</li>
+                    <li>I'm an avid reader, especially of tech and science fiction genres.</li>
+                    <li>In my free time, I enjoy hiking and exploring nature.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <img src="media/crypto.png" alt="Project 1 Thumbnail" class="project-thumbnail">
+                <div class="project-info">
+                    <h3>Crypto price check</h3>
+                    <p>  The Crypto Price Tracker is a web application that displays real-time prices for cryptocurrencies like Bitcoin, Ethereum, and Dogecoin. Built using Express.js for the backend and HTML, CSS, and JavaScript for the frontend, this project was inspired by a YouTube tutorial, but the backend implementation is original. It allows users to easily access and track cryptocurrency market data.</p>
+                    <div class="project-links">
+                        <a href="https://alnayeem01.github.io/crypto-web/" class="btn live-demo" data-project="1">Live Demo</a>
+                        <a href="https://github.com/alnayeem01/crypto-web/" class="btn github">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="project-card">
+                <img src="media/simon.png" alt="Project 2 Thumbnail" class="project-thumbnail">
+                <div class="project-info">
+                    <h3>Simon Game</h3>
+                    <p>Simon Game is a web-based memory challenge developed to showcase my skills acquired during the Udey Complete Web Development Bootcamp. This interactive game tests players' recall abilities through an engaging sequence of flashing lights and sounds. Featuring a vibrant design and user-friendly interface, Simon Game demonstrates my proficiency in HTML, CSS, and JavaScript. By creating this project, I highlighted my ability to develop interactive applications while delivering an enjoyable experience for users of all ages. Play and see how well you can remember!</p>
+                    <div class="project-links">
+                        <a href=" https://alnayeem01.github.io/simon-game/" class="btn live-demo" data-project="2">Live Demo</a>
+                        <a href="https://github.com/alnayeem01/simon-game/" class="btn github" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more projects similarly -->
+           
+        </div>
+
+    <!-- Skills Section -->
+   <section id="skills" class="skills-section">
+    <h2>Skills</h2>
+    <div class="skills-container">
+        <div class="slider">
+            <div class="skill-card">
+                <img src="media/html-icon.png" alt="HTML Icon">
+                <h3>HTML</h3>
+                <p>Proficiency Level: 90%</p>
+                <p>Learning: 2 years</p>
+                <p>Relevant Course: Web Development Bootcamp</p>
+            </div>
+            <div class="skill-card">
+                <img src="media/css-icon.png" alt="CSS Icon">
+                <h3>CSS</h3>
+                <p>Proficiency Level: 85%</p>
+                <p>Learning: 2 years</p>
+                <p>Relevant Course: Web Design Bootcamp</p>
+            </div>
+            <div class="skill-card">
+                <img src="media/js-icon.png" alt="JavaScript Icon">
+                <h3>JavaScript</h3>
+                <p>Proficiency Level: 80%</p>
+                <p>Learning: 1.5 years</p>
+                <p>Relevant Course: JavaScript for Web Development</p>
+            </div>
+            <div class="skill-card">
+                <img src="media/python-icon.png" alt="Python Icon">
+                <h3>Python</h3>
+                <p>Proficiency Level: 75%</p>
+                <p>Learning: 2 years</p>
+                <p>Relevant Course: Python Data Structures</p>
+            </div>
+            <div class="skill-card">
+                <img src="media/node-icon.png" alt="Node.js Icon">
+                <h3>Node.js</h3>
+                <p>Proficiency Level: 70%</p>
+                <p>Learning: 1 year</p>
+                <p>Relevant Course: Full-Stack Bootcamp</p>
+            </div>
+            <div class="skill-card">
+                <img src="media/java-icon.png" alt="Java Icon">
+                <h3>Java</h3>
+                <p>Proficiency Level: 85%</p>
+                <p>Learning: 2 years</p>
+                <p>Relevant Course: Advanced Java</p>
+            </div>
+            <div class="skill-card">
+                <img src="media/sql-icon.png" alt="SQL Icon">
+                <h3>SQL</h3>
+                <p>Proficiency Level: 70%</p>
+                <p>Learning: 1.5 years</p>
+                <p>Relevant Course: SQL for Data Management</p>
+            </div>
+        </div>
+     </div>
+    </section>
+
+<!--  
+    
+    <section id="testimonials" class="testimonials-section">
+        <h2>Testimonials</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial-slide active">
+                <p>"Al is an exceptional programmer with a keen eye for detail. His contributions were invaluable during our project." </p>
+                <h4>- Professor John Doe</h4>
+            </div>
+            <div class="testimonial-slide">
+                <p>"A dedicated and hard-working individual! Al consistently delivers high-quality work and is a pleasure to collaborate with." </p>
+                <h4>- Jane Smith, Peer</h4>
+            </div>
+            
+        </div>
+    </section>
+
+  
+    <section id="contact" class="contact-section">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="cta-button">Send Message</button>
+        </form>
+    </section>
+-->
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <p>© <span id="year">2024</span> Al Shahriar Nayeem. All rights reserved.</p>
+            </div>
+            <div class="footer-right">
+                <a href="mailto:nayeem2019@hotmail.com">Email</a>
+                <a href="https://github.com/alnayeem01">GitHub</a>
+                <a href="https://www.linkedin.com/in/al-shahriar-nayeem/">LinkedIn</a>
+            </div>
+        </div>
+        <button id="backToTop" class="back-to-top-btn"><i class="fas fa-arrow-up"></i></button>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,549 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0c2d48; /* Dark Blue */
+    color: #b1d4e0; /* Baby Blue */
+    transition: background-color 0.5s, color 0.5s;
+}
+
+a {
+    color: #2e8bc0; /* Blue */
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #145da0; /* Midnight Blue */
+}
+
+h1, h2, h3, h4 {
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #2e8bc0; /* Blue */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header / Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0c2d48; /* Dark Blue */
+    padding: 20px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+}
+
+.nav-menu li {
+    margin-left: 20px;
+}
+
+.nav-menu li a {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #b1d4e0; /* Baby Blue */
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #2e8bc0; /* Blue */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #145da0; /* Midnight Blue */
+    transform: scale(1.05);
+}
+
+/* About Section */
+.about-section {
+    padding: 60px 20px;
+    background-color: #b1d4e0; /* Baby Blue */
+    color: #0c2d48; /* Dark Blue */
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.profile-pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #2e8bc0; /* Blue */
+    transition: transform 0.3s;
+}
+
+.profile-pic:hover {
+    transform: scale(1.5);
+}
+
+.about-text {
+    flex: 1;
+    color: black;
+    
+}
+.about-text p {
+   margin-bottom: 10px;
+    
+}
+.about-text h3 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    padding: 0;
+     
+ }
+.about-text ul {
+    list-style: disc inside;
+    margin-top: 10px;
+}
+
+/* Projects Section */
+.projects-section {
+    padding: 60px 20px;
+    background-color: #0c2d48; /* Dark Blue */
+    color: #b1d4e0; /* Baby Blue */
+}
+
+.projects-section h2 {
+    margin-bottom: 40px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: #2e8bc0; /* Blue */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.project-thumbnail {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h3 {
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.project-links {
+    display: flex;
+    gap: 10px;
+}
+
+.project-links .btn {
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #145da0; /* Midnight Blue */
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.project-links .btn:hover {
+    background-color: #0c2d48; /* Dark Blue */
+}
+
+
+.close-button {
+    color: #ffffff; /* White */
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #2e8bc0; /* Blue */
+    text-decoration: none;
+    cursor: pointer;
+}
+/* skill section */
+/* Skills Section */
+.skills-section {
+    padding: 50px 20px;
+    background-color: #0c2d48; /* Dark Blue for consistency with the website */
+    color: #b1d4e0; /* Baby Blue */
+    text-align: center;
+}
+
+/* Skills container */
+.skills-container {
+    overflow: hidden; /* Hide the overflow of the slider */
+    width: 100%; /* Ensure the container spans the full width */
+    position: relative; /* Positioning context */
+}
+
+/* Slider styling */
+.slider {
+    display: flex; /* Use flexbox for horizontal layout */
+    white-space: nowrap; /* Prevent line breaks */
+    will-change: transform; /* Optimize for smoother transitions */
+    transition: transform 0.5s ease-in-out; /* Smooth transition */
+}
+
+/* Ensure the skill cards are visible */
+.skill-card {
+    flex: 0 0 auto; /* Prevent shrinking and ensure fixed size */
+    width: 250px; /* Fixed width for each card */
+    background-color: #b1d4e0; /* Baby Blue background for cards */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside cards */
+    margin: 0 10px; /* Space between cards */
+    text-align: center; /* Center text inside cards */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition on hover */
+}
+
+/* Skill card image styling */
+.skill-card img {
+    width: 60px; /* Slightly larger icons */
+    margin-bottom: 15px;
+}
+
+/* Skill card heading */
+.skill-card h3 {
+    margin: 15px 0;
+    color: #0c2d48; /* Dark Blue for headings */
+}
+
+/* Skill card paragraph text */
+.skill-card p {
+    font-size: 14px;
+    color: #0c2d48; /* Dark Blue for text */
+    margin: 5px 0;
+}
+
+/* Hover effect for the skill cards */
+.skill-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Animation pause when hovering over the container */
+.skills-container:hover .slider {
+    animation-play-state: paused; /* Pause the slider animation on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skills-container {
+        padding: 20px; /* Add some padding for mobile */
+    }
+    
+    .skill-card {
+        width: 200px; /* Smaller cards for mobile view */
+        margin: 0 5px; /* Reduced space between cards */
+    }
+}
+/* Add this to your existing CSS */
+
+@keyframes slide {
+    0% {
+        transform: translateX(100%); /* Start off-screen to the right */
+    }
+    100% {
+        transform: translateX(-100%); /* Move off-screen to the left */
+    }
+}
+
+/* Update the slider class to use the animation */
+.slider {
+    display: flex; /* Use flexbox for horizontal layout */
+    white-space: nowrap; /* Prevent line breaks */
+    animation: slide 10s linear infinite; /* Continuous slide animation */
+}
+
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 60px 20px;
+    background-color: #0c2d48; /* Dark Blue */
+    color: #b1d4e0; /* Baby Blue */
+    text-align: center;
+}
+
+.testimonial-slider {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonial-slide {
+    display: none;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.testimonial-slide.active {
+    display: block;
+}
+
+.testimonial-slide h4 {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 60px 20px;
+    background-color: #b1d4e0; /* Baby Blue */
+    color: #0c2d48; /* Dark Blue */
+    text-align: center;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+ .form-group input,
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #2e8bc0; /* Blue */
+    border-radius: 5px;
+    font-size: 16px;
+} 
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #145da0; /* Midnight Blue */
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-links a {
+    color: #0c2d48; /* Dark Blue */
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.contact-links a:hover {
+    color: #145da0; /* Midnight Blue */
+}
+
+/* Footer Section */
+footer {
+    background-color: #0c2d48; /* Dark Blue */
+    color: #b1d4e0; /* Baby Blue */
+    padding: 20px 30px;
+    position: relative;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.footer-left {
+    font-size: 14px;
+}
+
+.footer-right {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.footer-link {
+    color: #b1d4e0; /* Baby Blue */
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: #2e8bc0; /* Blue */
+}
+
+.back-to-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #2e8bc0; /* Blue */
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    display: none;
+    z-index: 1000;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.back-to-top-btn:hover {
+    background-color: #145da0; /* Midnight Blue */
+    transform: scale(1.1);
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #0c2d48; /* Dark Blue */
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-right {
+        margin-top: 10px;
+    }
+}
+.logo{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 150;
+    border: solid 0.1px white;
+    padding: 0.5rem;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-top: 0rem;
+
+}
+#logo{
+    height:5px;
+    margin-bottom: 20px;
+}
