@@ -36,27 +36,29 @@ backToTopBtn.addEventListener('click', () => {
     });
 });
 
-// Select necessary elements
-const slider = document.querySelector('.slider');
-const skillCards = document.querySelectorAll('.skill-card');
-const cloneSlider = () => {
-    const sliderWidth = slider.scrollWidth;
-    const viewportWidth = slider.parentElement.offsetWidth;
-    
-    if (sliderWidth < viewportWidth * 2) { // Clone cards if slider width is less than twice the viewport width
-        const clone = slider.innerHTML;
-        slider.innerHTML += clone; // Duplicate the content
-    }
-};
-cloneSlider();
-
 
 // Testimonials Slider
 const slides = document.querySelectorAll('.testimonial-slide');
-let currentI
+let currentIndex = 0;
 
-// form 
+// Function to show the current slide
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.style.display = (i === index) ? 'block' : 'none'; // Show current slide, hide others
+    });
+}
 
+// Function to go to the next slide
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length; // Loop back to the first slide if at the end
+    showSlide(currentIndex);
+}
+
+// Start the slider
+showSlide(currentIndex);
+setInterval(nextSlide, 5000); // Change slide every 5 seconds
+
+// Contact Form Submission
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('contact-form');
     const successMessage = document.getElementById('success-message');

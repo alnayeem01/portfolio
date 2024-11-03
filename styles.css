@@ -249,102 +249,59 @@ header {
     text-decoration: none;
     cursor: pointer;
 }
-/* skill section */
 /* Skills Section */
 .skills-section {
-    padding: 50px 20px;
-    background-color: #0c2d48; /* Dark Blue for consistency with the website */
+    padding: 60px 20px;
+    background-color: #0c2d48; /* Dark Blue */
     color: #b1d4e0; /* Baby Blue */
-    text-align: center;
-}
-
-/* Skills container */
-.skills-container {
-    overflow: hidden; /* Hide the overflow of the slider */
+  }
+  
+  .skills-container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping to next line */
+    justify-content: center; /* Center cards horizontally */
+    align-items: center; /* Align items at the start */
     width: 100%; /* Ensure the container spans the full width */
-    position: relative; /* Positioning context */
-}
-
-/* Slider styling */
-.slider {
-    display: flex; /* Use flexbox for horizontal layout */
-    white-space: nowrap; /* Prevent line breaks */
-    will-change: transform; /* Optimize for smoother transitions */
-    transition: transform 0.5s ease-in-out; /* Smooth transition */
-}
-
-/* Ensure the skill cards are visible */
-.skill-card {
-    flex: 0 0 auto; /* Prevent shrinking and ensure fixed size */
-    width: 250px; /* Fixed width for each card */
+    margin: 0 auto; /* Center container */
+  }
+  
+  /* Skill card styling */
+  .skill-card {
     background-color: #b1d4e0; /* Baby Blue background for cards */
     border-radius: 10px; /* Rounded corners */
     padding: 20px; /* Padding inside cards */
-    margin: 0 10px; /* Space between cards */
+    margin: 10px; /* Space between cards */
     text-align: center; /* Center text inside cards */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition on hover */
-}
-
-/* Skill card image styling */
-.skill-card img {
-    width: 60px; /* Slightly larger icons */
+    flex: 1; /* Make cards flexible to adjust to the container width */
+    min-width: 220px; /* Minimum width to ensure cards do not get too small */
+  }
+  
+  /* Skill card image styling */
+  .skill-card img {
+    width: 60px; /* Icon size */
     margin-bottom: 15px;
-}
-
-/* Skill card heading */
-.skill-card h3 {
+  }
+  
+  /* Skill card heading */
+  .skill-card h3 {
     margin: 15px 0;
     color: #0c2d48; /* Dark Blue for headings */
-}
-
-/* Skill card paragraph text */
-.skill-card p {
+  }
+  
+  /* Skill card paragraph text */
+  .skill-card p {
     font-size: 14px;
     color: #0c2d48; /* Dark Blue for text */
     margin: 5px 0;
-}
-
-/* Hover effect for the skill cards */
-.skill-card:hover {
+  }
+  
+  /* Hover effect for the skill cards */
+  .skill-card:hover {
     transform: translateY(-5px); /* Slight lift on hover */
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
-}
-
-/* Animation pause when hovering over the container */
-.skills-container:hover .slider {
-    animation-play-state: paused; /* Pause the slider animation on hover */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .skills-container {
-        padding: 20px; /* Add some padding for mobile */
-    }
-    
-    .skill-card {
-        width: 200px; /* Smaller cards for mobile view */
-        margin: 0 5px; /* Reduced space between cards */
-    }
-}
-/* Add this to your existing CSS */
-
-@keyframes slide {
-    0% {
-        transform: translateX(100%); /* Start off-screen to the right */
-    }
-    100% {
-        transform: translateX(-100%); /* Move off-screen to the left */
-    }
-}
-
-/* Update the slider class to use the animation */
-.slider {
-    display: flex; /* Use flexbox for horizontal layout */
-    white-space: nowrap; /* Prevent line breaks */
-    animation: slide 10s linear infinite; /* Continuous slide animation */
-}
-
+  }
 
 /* Testimonials Section */
 .testimonials-section {
