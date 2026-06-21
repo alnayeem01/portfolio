@@ -1,6 +1,6 @@
 import { ContactForm } from "./ContactForm";
 
-const credibility = ["London, UK", "CS Graduate", "Full Stack Engineer", "Open to Opportunities"];
+const credibility = ["CS Graduate", "Startup Experience", "Full Stack Delivery", "Open to Roles & Projects"];
 
 const projects = [
   {
@@ -66,11 +66,19 @@ const capabilities = [
   { layer: "delivery", tools: "Git, GitHub, Vercel, deployment, CI/CD basics" },
 ];
 
-const profile = [
-  { key: "role", value: "Full Stack Engineer" },
-  { key: "focus", value: "Product-focused systems" },
-  { key: "base", value: "London, UK" },
-  { key: "stack", value: "TypeScript, React, Node.js" },
+const snapshot = [
+  {
+    label: "Plan",
+    value: "Shape the product, user flow, and technical path before writing code.",
+  },
+  {
+    label: "Build",
+    value: "Create web, mobile, backend, and AI-powered features with a full stack approach.",
+  },
+  {
+    label: "Ship",
+    value: "Turn working software into something usable, presentable, and ready for real users.",
+  },
 ];
 
 function TypedField({ label, children }: { label: string; children: React.ReactNode }) {
@@ -102,34 +110,29 @@ function PlaceholderVisual({ label }: { label: string }) {
   );
 }
 
-function TypedProfileCard() {
+function ProductSnapshotCard() {
   return (
     <aside className="blueprint-panel rounded-lg border border-white/10 bg-charcoal/80 p-5 shadow-2xl shadow-black/30">
       <div className="flex items-center justify-between border-b border-white/10 pb-4">
-        <p className="font-mono text-sm text-cyan-signal">product-profile</p>
+        <p className="text-sm font-semibold text-paper">Product Engineering Snapshot</p>
         <span className="rounded-md border border-blueprint/30 bg-blueprint/10 px-2.5 py-1 text-xs text-blueprint">
           structured
         </span>
       </div>
-      <div className="mt-5 grid gap-3">
-        {profile.map((item) => (
-          <div key={item.key} className="grid grid-cols-[5.5rem_1fr] gap-3 text-sm">
-            <span className="font-mono text-muted">{item.key}</span>
-            <span className="text-paper">{item.value}</span>
+      <div className="mt-5 grid gap-4">
+        {snapshot.map((item) => (
+          <div key={item.label} className="border-b border-white/10 pb-4 last:border-0 last:pb-0">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blueprint">{item.label}</p>
+            <p className="mt-2 leading-6 text-paper">{item.value}</p>
           </div>
         ))}
       </div>
       <div className="mt-6 rounded-md border border-white/10 bg-ink/70 p-4">
         <p className="font-mono text-xs leading-6 text-muted">
-          <span className="text-blueprint">type</span> ProductEngineer = {"{"}
-          <br />
-          &nbsp;&nbsp;builds: <span className="text-sand">&quot;usable products&quot;</span>;
-          <br />
-          &nbsp;&nbsp;thinksIn: <span className="text-sand">&quot;systems&quot;</span>;
-          <br />
-          &nbsp;&nbsp;shipsFor: <span className="text-sand">&quot;real users&quot;</span>;
-          <br />
-          {"}"}
+          <span className="text-blueprint">type</span> Product ={" "}
+          <span className="text-sand">&quot;planned&quot;</span> |{" "}
+          <span className="text-sand">&quot;built&quot;</span> |{" "}
+          <span className="text-sand">&quot;shipped&quot;</span>;
         </p>
       </div>
     </aside>
@@ -157,31 +160,27 @@ export default function Home() {
         </nav>
       </header>
 
-      <section className="mx-auto grid min-h-[calc(100vh-4rem)] w-full max-w-6xl gap-12 px-6 py-16 sm:px-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-center lg:px-10">
+      <section className="mx-auto grid min-h-[calc(100vh-4rem)] w-full max-w-6xl gap-10 px-6 py-12 sm:px-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-center lg:px-10">
         <div>
           <p className="mb-6 text-sm font-medium uppercase tracking-[0.22em] text-blueprint">
-            Product-focused full stack engineer
+            London-based full stack engineer
           </p>
           <h1 className="max-w-4xl text-5xl font-semibold leading-[1.02] text-paper sm:text-6xl lg:text-7xl">
-            Structured software for founders, teams, and real customers.
+            I turn product ideas into software people can actually use.
           </h1>
-          <p className="mt-7 max-w-2xl text-lg leading-8 text-muted">
-            I help founders and teams turn ideas into usable software, from customer-facing apps to
-            internal tools that make daily work easier. The work is technical, but the goal is simple:
-            build products people can understand, trust, and use.
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-muted">
+            Full stack engineer building web, mobile, and AI-powered systems for founders,
+            startups, and teams that need more than a nice-looking prototype.
           </p>
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a className="rounded-md bg-blueprint px-5 py-3 text-center text-sm font-semibold text-white shadow-[0_0_28px_rgba(49,120,198,0.22)]" href="#work">
               View Work
             </a>
             <a className="rounded-md border border-white/15 px-5 py-3 text-center text-sm font-semibold text-paper hover:border-white/30" href="#contact">
-              Contact Me
-            </a>
-            <a className="rounded-md px-5 py-3 text-center text-sm font-semibold text-muted hover:text-paper" href="mailto:nayeem2019@hotmail.com?subject=Resume%20request">
-              Request Resume
+              Start a Conversation
             </a>
           </div>
-          <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {credibility.map((item) => (
               <div key={item} className="rounded-md border border-white/10 bg-white/3 px-4 py-3 text-sm text-muted">
                 {item}
@@ -189,7 +188,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-        <TypedProfileCard />
+        <ProductSnapshotCard />
       </section>
 
       <section className="border-t border-white/10 py-20" id="work">
@@ -293,10 +292,9 @@ export default function Home() {
         <div className="mx-auto grid w-full max-w-6xl gap-10 px-6 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:px-10">
           <div>
             <p className="text-sm font-medium uppercase tracking-[0.22em] text-blueprint">Contact</p>
-            <h2 className="mt-4 text-3xl font-semibold text-paper">Available for engineering roles, freelance projects, and startup collaborations.</h2>
+            <h2 className="mt-4 text-3xl font-semibold text-paper">Let’s start a conversation.</h2>
             <p className="mt-4 leading-7 text-muted">
-              Send a short message about the role, product, or problem you want to discuss. The form
-              opens your email app so you can review the message before sending.
+              Whether it’s a role, project, or product idea, feel free to reach out.
             </p>
             <div className="mt-8 grid gap-3 text-sm text-muted">
               <a href="mailto:nayeem2019@hotmail.com">nayeem2019@hotmail.com</a>

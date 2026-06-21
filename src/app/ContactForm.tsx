@@ -1,24 +1,39 @@
 "use client";
 
-import { FormEvent } from "react";
+import { FormEvent, useState } from "react";
 
 const emailAddress = "nayeem2019@hotmail.com";
+const formspreeEndpoint = "https://formspree.io/f/mvgozebp";
 
 export function ContactForm() {
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const formData = new FormData(event.currentTarget);
-    const name = String(formData.get("name") || "").trim();
-    const email = String(formData.get("email") || "").trim();
-    const message = String(formData.get("message") || "").trim();
+    const form = event.currentTarget;
+    const formData = new FormData(form);
 
-    const subject = encodeURIComponent(`Portfolio enquiry from ${name || "a visitor"}`);
-    const body = encodeURIComponent(
-      [`Name: ${name}`, `Email: ${email}`, "", message].join("\n"),
-    );
+    setStatus("sending");
 
-    window.location.href = `mailto:${emailAddress}?subject=${subject}&body=${body}`;
+    try {
+      const response = await fetch(formspreeEndpoint, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
+
+      form.reset();
+      setStatus("sent");
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -56,14 +71,24 @@ export function ContactForm() {
         />
       </label>
       <button
-        className="h-12 rounded-md bg-blueprint px-5 text-sm font-semibold text-white shadow-[0_0_28px_rgba(49,120,198,0.22)] transition hover:bg-[#2B6FB6]"
+        className="h-12 rounded-md bg-blueprint px-5 text-sm font-semibold text-white shadow-[0_0_28px_rgba(49,120,198,0.22)] transition hover:bg-[#2B6FB6] disabled:cursor-not-allowed disabled:opacity-70"
+        disabled={status === "sending"}
         type="submit"
       >
-        Send Message
+        {status === "sending" ? "Sending..." : "Send Message"}
       </button>
-      <p className="text-xs leading-5 text-muted">
-        This opens your email app with the message prefilled. Nothing is sent until you press send.
-      </p>
+      {status === "sent" ? (
+        <p className="text-sm leading-6 text-cyan-signal">Thanks. Your message has been sent.</p>
+      ) : null}
+      {status === "error" ? (
+        <p className="text-sm leading-6 text-sand">
+          Something went wrong. Please email{" "}
+          <a className="underline underline-offset-4" href={`mailto:${emailAddress}`}>
+            {emailAddress}
+          </a>
+          .
+        </p>
+      ) : null}
     </form>
   );
 }
