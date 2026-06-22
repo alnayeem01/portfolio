@@ -8,7 +8,7 @@ const credibility = ["CS Graduate", "Full Stack", "Open to Work"];
 const projects = [
   {
     name: "Checkdin",
-    file: "case-study.checkdin",
+    file: "projects/checkdin.ts",
     status: "Work project / live product",
     image: checkdinImage.src,
     problem: "Teams need a simpler way to manage attendance, check-ins, and daily workforce visibility.",
@@ -21,7 +21,7 @@ const projects = [
   },
   {
     name: "Customer Service Hub",
-    file: "case-study.support-hub",
+    file: "projects/customer-service-hub.ts",
     status: "University project / SaaS in development",
     image: parrtoImage.src,
     problem:
@@ -34,7 +34,7 @@ const projects = [
   },
   {
     name: "Learnify",
-    file: "case-study.learnify",
+    file: "projects/learnify.ts",
     status: "Personal project",
     image: learnifyImage.src,
     problem:
@@ -80,7 +80,7 @@ const capabilities = [
 function TypedField({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div className="grid gap-1.5 border-t border-white/10 pt-3">
-      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blueprint">{label}</p>
+      <p className="font-mono text-xs text-blueprint">{label}:</p>
       <p className="text-sm leading-6 text-muted">{children}</p>
     </div>
   );
