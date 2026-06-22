@@ -1,6 +1,6 @@
 import { ContactForm } from "./ContactForm";
 
-const credibility = ["CS Graduate", "Startup Experience", "Full Stack Delivery", "Open to Roles & Projects"];
+const credibility = ["CS Graduate", "Full Stack Developer", "Startup Experience", "Open to Work"];
 
 const projects = [
   {
@@ -116,7 +116,7 @@ function ProductSnapshotCard() {
       <div className="flex items-center justify-between border-b border-white/10 pb-4">
         <p className="text-sm font-semibold text-paper">Product Engineering Snapshot</p>
         <span className="rounded-md border border-blueprint/30 bg-blueprint/10 px-2.5 py-1 text-xs text-blueprint">
-          structured
+          .ts
         </span>
       </div>
       <div className="mt-5 grid gap-4">
@@ -160,19 +160,19 @@ export default function Home() {
         </nav>
       </header>
 
-      <section className="mx-auto grid min-h-[calc(100vh-4rem)] w-full max-w-6xl gap-10 px-6 py-12 sm:px-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-center lg:px-10">
+      <section className="mx-auto grid min-h-[calc(100svh-4rem)] w-full max-w-6xl gap-8 px-6 py-8 sm:px-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-center lg:px-10">
         <div>
-          <p className="mb-6 text-sm font-medium uppercase tracking-[0.22em] text-blueprint">
+          <p className="mb-4 text-sm font-medium uppercase tracking-[0.22em] text-blueprint">
             London-based full stack engineer
           </p>
-          <h1 className="max-w-4xl text-5xl font-semibold leading-[1.02] text-paper sm:text-6xl lg:text-7xl">
-            I turn product ideas into software people can actually use.
+          <h1 className="max-w-3xl text-4xl font-semibold leading-[1.05] text-paper sm:text-5xl lg:text-6xl">
+            Full stack developer building practical, polished web products.
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-muted">
-            Full stack engineer building web, mobile, and AI-powered systems for founders,
-            startups, and teams that need more than a nice-looking prototype.
+          <p className="mt-5 max-w-2xl text-base leading-7 text-muted sm:text-lg">
+            I build web, mobile, and AI-powered systems for startups, founders, and teams
+            that need useful software shipped well.
           </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
             <a className="rounded-md bg-blueprint px-5 py-3 text-center text-sm font-semibold text-white shadow-[0_0_28px_rgba(49,120,198,0.22)]" href="#work">
               View Work
             </a>
@@ -180,9 +180,9 @@ export default function Home() {
               Start a Conversation
             </a>
           </div>
-          <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-7 grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
             {credibility.map((item) => (
-              <div key={item} className="rounded-md border border-white/10 bg-white/3 px-4 py-3 text-sm text-muted">
+              <div key={item} className="rounded-md border border-white/10 bg-white/3 px-3 py-2 text-sm text-muted">
                 {item}
               </div>
             ))}
