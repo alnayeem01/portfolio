@@ -129,7 +129,7 @@ function ProductSnapshotCard() {
           <span className="text-sand">&quot;mobile&quot;</span>];
         </p>
         <p className="mt-2 inline-block max-w-full overflow-hidden whitespace-nowrap border-r border-cyan-signal pr-1 text-cyan-signal typing-line">
-          building quietly, shipping carefully
+          simple products, steady delivery
         </p>
       </div>
     </aside>
