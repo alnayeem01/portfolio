@@ -3,17 +3,17 @@ import checkdinImage from "../../media/checkdin.png";
 import parrtoImage from "../../media/parrot.png";
 import learnifyImage from "../../media/learinfy.png";
 
-const credibility = ["CS Graduate", "Full Stack", "Open to Work"];
+const credibility = ["CS Graduate", "Full Stack Developer", "Available for Work"];
 
 const projects = [
   {
     name: "Checkdin",
     file: "projects/checkdin.ts",
-    status: "Work project / live product",
+    status: "Work project / public product",
     image: checkdinImage.src,
     problem: "Teams need a simpler way to manage attendance, check-ins, and daily workforce visibility.",
     built:
-      "Built with another developer as a full stack registration and check-in platform, including event workflows and Stripe-powered payments.",
+      "Contributed to a full stack registration and check-in platform with event workflows and Stripe-powered payments.",
     outcome:
       "Supports a live product used around real event and operational workflows, with private implementation details kept out of this portfolio.",
     stack: ["Two-developer build", "Full stack features", "Stripe payments", "Live product"],
@@ -42,7 +42,7 @@ const projects = [
     built:
       "A React Native audio learning app with a custom Express backend, MongoDB data storage, and cloud-based audio handling.",
     outcome:
-      "Shows full stack mobile delivery, backend API design, media handling, and a clean mobile-first user experience.",
+      "Demonstrates full stack mobile delivery, backend API design, media handling, and a clean mobile-first user experience.",
     stack: ["React Native", "Express.js", "MongoDB", "Audio streaming"],
     links: [
       { label: "Mobile repo", href: "https://github.com/alnayeem01/learnify-mobile-app" },
@@ -54,18 +54,22 @@ const projects = [
 const services = [
   {
     name: "SaaS & Business Systems",
+    file: "service.saas",
     description: "Dashboards, portals, CRM-style tools, and internal systems for teams that need software around real operations.",
   },
   {
     name: "Mobile Applications",
+    file: "service.mobile",
     description: "Cross-platform apps for iOS and Android, built around practical user journeys rather than just screens.",
   },
   {
     name: "AI Integrations",
+    file: "service.ai",
     description: "Customer support assistants, workflow automation, and AI features that make existing processes faster.",
   },
   {
     name: "MVP Development",
+    file: "service.mvp",
     description: "Helping founders turn an idea into a usable first product that can be tested with real users.",
   },
 ];
@@ -190,8 +194,7 @@ export default function Home() {
             <p className="text-sm font-medium uppercase tracking-[0.22em] text-blueprint">Selected systems</p>
             <h2 className="mt-3 text-3xl font-semibold text-paper sm:text-4xl">Products and platforms built around real needs.</h2>
             <p className="mt-3 leading-7 text-muted">
-              The small structured labels are a visual nod to typed systems. The stories stay focused
-              on business problems, product decisions, and what the software helps people do.
+              A few selected projects showing product thinking, full stack development, and practical delivery.
             </p>
           </div>
           <div className="mt-7 grid gap-4">
@@ -245,8 +248,8 @@ export default function Home() {
       <section className="border-t border-white/10 py-20" id="experience">
         <div className="mx-auto grid w-full max-w-6xl gap-8 px-6 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:px-10">
           <div>
-            <p className="text-sm font-medium uppercase tracking-[0.22em] text-blueprint">Experience</p>
-            <h2 className="mt-4 text-3xl font-semibold text-paper">Full stack work on live products.</h2>
+            <p className="font-mono text-sm text-blueprint">experience.ts</p>
+            <h2 className="mt-4 text-3xl font-semibold text-paper">Full stack work on real product teams.</h2>
           </div>
           <div className="blueprint-panel rounded-lg border border-white/10 bg-charcoal/70 p-6">
             <div className="flex flex-wrap items-start justify-between gap-3 border-b border-white/10 pb-5">
@@ -275,10 +278,11 @@ export default function Home() {
 
       <section className="border-t border-white/10 py-20" id="services">
         <div className="mx-auto w-full max-w-6xl px-6 sm:px-8 lg:px-10">
-          <p className="text-sm font-medium uppercase tracking-[0.22em] text-blueprint">Ways I can help</p>
+          <p className="font-mono text-sm text-blueprint">services.ts</p>
           <div className="mt-8 grid gap-4 md:grid-cols-2">
             {services.map((service) => (
               <article key={service.name} className="rounded-lg border border-white/10 bg-white/3 p-6">
+                <p className="mb-3 font-mono text-xs text-blueprint">{service.file}</p>
                 <h3 className="text-xl font-semibold text-paper">{service.name}</h3>
                 <p className="mt-3 leading-7 text-muted">{service.description}</p>
               </article>
@@ -290,13 +294,13 @@ export default function Home() {
       <section className="border-t border-white/10 py-20" id="about">
         <div className="mx-auto grid w-full max-w-6xl gap-10 px-6 sm:px-8 lg:grid-cols-[1fr_1fr] lg:px-10">
           <div>
-            <p className="text-sm font-medium uppercase tracking-[0.22em] text-blueprint">About</p>
+            <p className="font-mono text-sm text-blueprint">about.ts</p>
             <h2 className="mt-4 text-3xl font-semibold text-paper">A London-based engineer with product instincts.</h2>
             <p className="mt-5 leading-8 text-muted">
               I am a Computer Science graduate building software in a startup environment while
               developing SaaS products and AI-powered systems. TypeScript is part of my preferred
               toolkit, but the bigger focus is reliable full stack product engineering: clear interfaces,
-              useful workflows, and systems strong enough to support real users.
+              useful workflows, and systems that are clear, maintainable, and useful for real work.
             </p>
           </div>
           <div className="blueprint-panel rounded-lg border border-white/10 bg-charcoal/70 p-6">
@@ -316,7 +320,7 @@ export default function Home() {
       <section className="border-t border-white/10 py-20" id="contact">
         <div className="mx-auto grid w-full max-w-6xl gap-10 px-6 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:px-10">
           <div>
-            <p className="text-sm font-medium uppercase tracking-[0.22em] text-blueprint">Contact</p>
+            <p className="font-mono text-sm text-blueprint">contact.ts</p>
             <h2 className="mt-4 text-3xl font-semibold text-paper">Let’s start a conversation.</h2>
             <p className="mt-4 leading-7 text-muted">
               Whether it’s a role, project, or product idea, feel free to reach out.
@@ -344,7 +348,7 @@ export default function Home() {
 
       <footer className="border-t border-white/10 py-6">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 px-6 text-sm text-muted sm:flex-row sm:items-center sm:justify-between sm:px-8 lg:px-10">
-          <p>© 2026 Al Shahriar Nayeem.</p>
+          <p>© 2026 Al Shahriar Nayeem. <span className="font-mono text-blueprint">built.ts</span></p>
           <div className="flex gap-4">
             <a href="mailto:nayeem2019@hotmail.com">Email</a>
             <a href="https://github.com/alnayeem01">GitHub</a>
