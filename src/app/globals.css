@@ -60,3 +60,32 @@ a {
 .blueprint-panel > * {
   position: relative;
 }
+
+.typing-line {
+  animation:
+    typing 2.6s steps(36, end) both,
+    cursor-blink 900ms step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 36ch;
+  }
+}
+
+@keyframes cursor-blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .typing-line {
+    animation: none;
+    width: auto;
+  }
+}

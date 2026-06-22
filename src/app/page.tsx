@@ -1,6 +1,7 @@
 import { ContactForm } from "./ContactForm";
+import learnifyImage from "../../media/learinfy.png";
 
-const credibility = ["CS Graduate", "Full Stack Developer", "Startup Experience", "Open to Work"];
+const credibility = ["CS Graduate", "Full Stack", "Open to Work"];
 
 const projects = [
   {
@@ -27,16 +28,17 @@ const projects = [
     stack: ["AI integration", "SaaS architecture", "Workflow design", "Customer experience"],
   },
   {
-    name: "Startup Engineering",
-    file: "case-study.startup-work",
-    status: "Production experience",
+    name: "Learnify",
+    file: "case-study.learnify",
+    status: "Personal project",
+    image: learnifyImage.src,
     problem:
-      "Startup teams need engineers who can move across the product and ship useful features without needing perfect conditions.",
+      "Learning content is often scattered across videos, notes, and playlists instead of being easy to access through audio.",
     built:
-      "Frontend and backend features across APIs, authentication, database logic, and business workflows.",
+      "A React Native audio learning app with a custom Express backend, MongoDB data storage, and cloud-based audio handling.",
     outcome:
-      "Contributed to production software by solving product problems, not just completing isolated technical tasks.",
-    stack: ["APIs", "Authentication", "Database design", "Feature delivery"],
+      "Shows full stack mobile delivery, backend API design, media handling, and a clean mobile-first user experience.",
+    stack: ["React Native", "Express.js", "MongoDB", "Audio streaming"],
   },
 ];
 
@@ -66,21 +68,6 @@ const capabilities = [
   { layer: "delivery", tools: "Git, GitHub, Vercel, deployment, CI/CD basics" },
 ];
 
-const snapshot = [
-  {
-    label: "Plan",
-    value: "Shape the product, user flow, and technical path before writing code.",
-  },
-  {
-    label: "Build",
-    value: "Create web, mobile, backend, and AI-powered features with a full stack approach.",
-  },
-  {
-    label: "Ship",
-    value: "Turn working software into something usable, presentable, and ready for real users.",
-  },
-];
-
 function TypedField({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div className="grid gap-2 border-t border-white/10 pt-4">
@@ -90,49 +77,46 @@ function TypedField({ label, children }: { label: string; children: React.ReactN
   );
 }
 
-function PlaceholderVisual({ label }: { label: string }) {
+function PlaceholderVisual({ label, image }: { label: string; image?: string }) {
   return (
-    <div className="blueprint-panel relative min-h-64 overflow-hidden rounded-md border border-white/10 bg-surface">
-      <div className="absolute inset-x-0 top-0 flex h-10 items-center gap-2 border-b border-white/10 bg-white/3 px-4">
-        <span className="h-2.5 w-2.5 rounded-full bg-sand" />
-        <span className="h-2.5 w-2.5 rounded-full bg-blueprint" />
-        <span className="h-2.5 w-2.5 rounded-full bg-cyan-signal" />
-      </div>
-      <div className="grid min-h-64 place-items-center px-6 pt-10 text-center">
-        <div>
-          <p className="text-sm font-semibold text-paper">{label}</p>
-          <p className="mt-2 max-w-xs text-sm leading-6 text-muted">
-            Placeholder image area. We will replace this with a real product screenshot or mockup.
-          </p>
+    <div className="relative aspect-[16/10] overflow-hidden rounded-md border border-white/10 bg-surface">
+      {image ? (
+        <img className="h-full w-full object-cover" src={image} alt={label} />
+      ) : (
+        <div className="grid h-full place-items-center px-6 text-center">
+          <div>
+            <p className="font-mono text-xs text-blueprint">preview.pending</p>
+            <p className="mt-2 text-sm font-semibold text-paper">{label}</p>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
 
 function ProductSnapshotCard() {
   return (
-    <aside className="blueprint-panel rounded-lg border border-white/10 bg-charcoal/80 p-5 shadow-2xl shadow-black/30">
+    <aside className="rounded-lg border border-white/10 bg-charcoal/70 p-5 shadow-2xl shadow-black/20">
       <div className="flex items-center justify-between border-b border-white/10 pb-4">
-        <p className="text-sm font-semibold text-paper">Product Engineering Snapshot</p>
+        <p className="text-sm font-semibold text-paper">nayeem.ts</p>
         <span className="rounded-md border border-blueprint/30 bg-blueprint/10 px-2.5 py-1 text-xs text-blueprint">
           .ts
         </span>
       </div>
-      <div className="mt-5 grid gap-4">
-        {snapshot.map((item) => (
-          <div key={item.label} className="border-b border-white/10 pb-4 last:border-0 last:pb-0">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-blueprint">{item.label}</p>
-            <p className="mt-2 leading-6 text-paper">{item.value}</p>
-          </div>
-        ))}
-      </div>
-      <div className="mt-6 rounded-md border border-white/10 bg-ink/70 p-4">
-        <p className="font-mono text-xs leading-6 text-muted">
-          <span className="text-blueprint">type</span> Product ={" "}
-          <span className="text-sand">&quot;planned&quot;</span> |{" "}
-          <span className="text-sand">&quot;built&quot;</span> |{" "}
-          <span className="text-sand">&quot;shipped&quot;</span>;
+      <div className="mt-6 rounded-md border border-white/10 bg-ink/50 p-4 font-mono text-xs leading-7 text-muted">
+        <p>
+          <span className="text-blueprint">type</span> Platform ={" "}
+          <span className="text-sand">&quot;web&quot;</span> |{" "}
+          <span className="text-sand">&quot;mobile&quot;</span>;
+        </p>
+        <p className="mt-2">
+          <span className="text-blueprint">const</span>{" "}
+          <span className="text-paper">focus</span>: Platform[] = [
+          <span className="text-sand">&quot;web&quot;</span>,{" "}
+          <span className="text-sand">&quot;mobile&quot;</span>];
+        </p>
+        <p className="mt-2 inline-block max-w-full overflow-hidden whitespace-nowrap border-r border-cyan-signal pr-1 text-cyan-signal typing-line">
+          building quietly, shipping carefully
         </p>
       </div>
     </aside>
@@ -166,11 +150,11 @@ export default function Home() {
             London-based full stack engineer
           </p>
           <h1 className="max-w-3xl text-4xl font-semibold leading-[1.05] text-paper sm:text-5xl lg:text-6xl">
-            Full stack developer building practical, polished web products.
+            I build simple web and mobile products.
           </h1>
-          <p className="mt-5 max-w-2xl text-base leading-7 text-muted sm:text-lg">
-            I build web, mobile, and AI-powered systems for startups, founders, and teams
-            that need useful software shipped well.
+          <p className="mt-5 max-w-xl text-base leading-7 text-muted sm:text-lg">
+            Full stack developer with startup experience, focused on useful interfaces,
+            clean backend work, and steady delivery.
           </p>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
             <a className="rounded-md bg-blueprint px-5 py-3 text-center text-sm font-semibold text-white shadow-[0_0_28px_rgba(49,120,198,0.22)]" href="#work">
@@ -180,7 +164,7 @@ export default function Home() {
               Start a Conversation
             </a>
           </div>
-          <div className="mt-7 grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-7 flex flex-wrap gap-2">
             {credibility.map((item) => (
               <div key={item} className="rounded-md border border-white/10 bg-white/3 px-3 py-2 text-sm text-muted">
                 {item}
@@ -204,7 +188,7 @@ export default function Home() {
           <div className="mt-10 grid gap-5">
             {projects.map((project) => (
               <article key={project.name} className="grid gap-6 rounded-lg border border-white/10 bg-charcoal/70 p-5 lg:grid-cols-[0.95fr_1.05fr]">
-                <PlaceholderVisual label={`${project.name} screenshot`} />
+                <PlaceholderVisual label={`${project.name} screenshot`} image={project.image} />
                 <div className="flex flex-col justify-between">
                   <div>
                     <div className="flex flex-wrap items-center gap-3">
