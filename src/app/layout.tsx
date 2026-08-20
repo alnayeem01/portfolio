@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -14,7 +15,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Script
+          src="https://widget.paroot.co/widget.js"
+          data-api-key="a3e0b7038c74f703e0ae62f7507d944e97b06317bd05439f4d77e53a4b5e87e6"
+          strategy="afterInteractive"
+        />
+      </body>
     </html>
   );
 }
